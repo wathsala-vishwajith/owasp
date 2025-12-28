@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  min-height: 100vh;
+}
+
+.app {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.warning {
+  background: #ff6b6b;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exploit-section,
+.info-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exploit-section h2,
+.info-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f5576c;
+  padding-bottom: 10px;
+}
+
+.exploit-card {
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.exploit-card h3 {
+  color: #f5576c;
+  margin-bottom: 10px;
+}
+
+.exploit-card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.exploit-card button {
+  padding: 10px 20px;
+  background: #f5576c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.exploit-card button:hover:not(:disabled) {
+  background: #e94560;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exploit-card button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.exploit-card pre {
+  background: #1e1e1e;
+  color: #00ff00;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin-top: 15px;
+  font-size: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.exploit-card ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.exploit-card li {
+  margin: 8px 0;
+}
+
+.exploit-card a {
+  color: #f5576c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.exploit-card a:hover {
+  text-decoration: underline;
+}
+
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f5576c;
+  color: white !important;
+  border-radius: 5px;
+  text-decoration: none !important;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.link-button:hover {
+  background: #e94560;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.info-section ul {
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin: 12px 0;
+  color: #666;
+  line-height: 1.6;
+}

@@ -1,0 +1,244 @@
+.user-profile {
+  margin-top: 20px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+}
+
+.profile-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-section {
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.profile-section h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.profile-section.sensitive {
+  border-color: #ff6b6b;
+  background: #fff5f5;
+}
+
+.profile-section.exploit {
+  border-color: #ffc107;
+  background: #fffbf0;
+}
+
+.profile-section.info {
+  border-color: #667eea;
+  background: #f3f4ff;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-item .label {
+  font-size: 12px;
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.info-item .value {
+  font-size: 16px;
+  color: #333;
+}
+
+.info-item .value.role-user {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.info-item .value.role-admin {
+  color: #e65100;
+  font-weight: bold;
+}
+
+.warning-box {
+  margin-top: 15px;
+  padding: 12px;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.exploit-action {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.exploit-action:last-child {
+  margin-bottom: 0;
+}
+
+.exploit-action h4 {
+  margin: 0 0 8px 0;
+  color: #d32f2f;
+  font-size: 16px;
+}
+
+.exploit-action p {
+  margin: 0 0 12px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.exploit-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.exploit-form input,
+.exploit-form select {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.exploit-form input:focus,
+.exploit-form select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.exploit-form button {
+  padding: 10px 20px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.exploit-form button:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exploit-form button.danger {
+  background: #d32f2f;
+}
+
+.exploit-form button.danger:hover {
+  background: #b71c1c;
+}
+
+.exploit-action button {
+  padding: 10px 20px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.exploit-action button:hover:not(:disabled) {
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exploit-action button.danger {
+  background: #d32f2f;
+}
+
+.exploit-action button.danger:hover:not(:disabled) {
+  background: #b71c1c;
+}
+
+.exploit-action button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.exploit-action .note {
+  margin: 10px 0 0 0;
+  color: #999;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.profile-section.info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #333;
+}
+
+.profile-section.info li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.profile-section.info li strong {
+  color: #667eea;
+}
+
+.user-profile.loading,
+.user-profile.error {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+}
+
+.user-profile.error {
+  color: #d32f2f;
+}

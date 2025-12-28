@@ -1,0 +1,163 @@
+.user-list {
+  padding: 0;
+}
+
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+}
+
+.user-list-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.vulnerability-tag {
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.vulnerability-tag.danger {
+  background: #d32f2f;
+}
+
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.user-card:hover {
+  border-color: #667eea;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.user-card.current {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.user-card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.role-badge {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.role-badge.user {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.role-badge.admin {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.user-card-body p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.current-user-indicator {
+  margin-top: 10px;
+  padding: 5px;
+  background: #667eea;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.user-card-footer {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.view-btn {
+  width: 100%;
+  padding: 8px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.view-btn:hover {
+  background: #5568d3;
+}
+
+.vulnerability-info {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.vulnerability-info h4 {
+  margin: 0 0 10px 0;
+  color: #856404;
+}
+
+.vulnerability-info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #856404;
+}
+
+.vulnerability-info li {
+  margin-bottom: 5px;
+}
+
+.user-list.loading,
+.user-list.error {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+}
+
+.user-list.error {
+  color: #d32f2f;
+}
